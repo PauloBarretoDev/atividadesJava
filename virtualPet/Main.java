@@ -29,14 +29,20 @@ public class Main{
                 break;
             }
             System.out.println("---------");
-            System.out.println(pet);
-            System.out.println("---------");
-            System.out.println("O que deseja fazer?");
-            System.out.println("1 - Comer ");
-            System.out.println( "2  - Correr ");
-            System.out.println("3 - Dormir ");
-            System.out.println("4 - Sair do programa");
-            resp = scanner.nextInt();
+            if(pet.forca<=0){
+                System.out.println("O pet morreu");
+                break;
+            }else{
+                System.out.println(pet);
+                System.out.println("---------");
+                System.out.println("O que deseja fazer?");
+                System.out.println("1 - Comer ");
+                System.out.println( "2  - Correr ");
+                System.out.println("3 - Dormir ");
+                System.out.println("4 - Sair do programa");
+                resp = scanner.nextInt();
+            }
+            
         }
         scanner.close();
     }
